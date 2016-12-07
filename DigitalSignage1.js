@@ -1,10 +1,32 @@
-var test = 0;
-
-$(function() {
-
-	var $setElm = $('.viewer'),
-    fadeSpeed = 1300,
-    switchDelay = 7000;
+// $(function() {
+//     // 設定
+//     var $width = 640; // 横幅
+//     var $height = 300; // 高さ
+//     var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+//     var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
+//     $("#slide ul li").css({
+//         "position": "relative",
+//         "overflow": "hidden",
+//         "width": $width,
+//         "height": $height
+//     });
+//     $("#slide ul li").hide().css({
+//         "position": "absolute",
+//         "top": 0,
+//         "left": 0
+//     });
+//     $("#slide ul li:first").addClass("active").show();
+//     setInterval(function() {
+//         var $active = $("#slide ul li.active");
+//         var $next = $active.next("li").length ? $active.next("li") : $("#slide ul li:first");
+//         $active.fadeOut($fade_speed).removeClass("active");
+//         $next.fadeIn($fade_speed).addClass("active");
+//     }, $interval);
+// });
+$(function(){
+    var $setElm = $('.viewer'),
+    fadeSpeed = 1500,
+    switchDelay = 5000;
 
     $setElm.each(function(){
         var targetObj = $(this);
@@ -19,40 +41,4 @@ $(function() {
             findUl.find('li:first-child').animate({opacity:'0'},fadeSpeed).next('li').css({zIndex:'100'}).animate({opacity:'1'},fadeSpeed).end().appendTo(findUl).css({zIndex:'99'});
         },switchDelay);
     });
-
-// 	setInterval(function () {
-//         if (test == 0) {
-//             console.log("1");
-//             test = 1;
-//             page1();
-//         } else if (test == 1) {
-//             console.log("2");
-//             test = 2;
-//             page2();
-//         } else {
-//             console.log("3");
-//             test = 0;
-//             page3();
-//         }
-//     }, 10000);
-//
-// 	function page1() {
-//         $('#pic1').show();
-// 		$('#pic2').hide();
-// 		$('#pic3').hide();
-//     }
-//
-//     function page2() {
-//         $('#pic2').show();
-// 		$('#pic3').hide();
-// 		$('#pic1').hide();
-//     }
-//
-//
-//     function page3() {
-//         $('#pic3').show();
-// 		$('#pic1').hide();
-// 		$('#pic2').hide();
-//     }
-//
-// });
+});
