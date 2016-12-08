@@ -3,7 +3,6 @@
     width: 960px;
     height: 400px;
     text-align: center;
-    overflow: hidden;
     font-size: 80px;
 }
 
@@ -11,7 +10,6 @@
     width: 960px;
     height: 400px;
     text-align: center;
-    overflow: hidden;
     position: relative;
 }
 
