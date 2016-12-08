@@ -1,13 +1,41 @@
 #viewer {
+    width: 450px;
+    height: 300px;
+    text-align: left;
+    overflow: hidden;
+    float: left;
+    font-size: 40px;
+    margin-left: 60px;
+}
+
+#viewer ul {
+    width: 450px;
+    height: 300px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+#viewer ul li {
+    top: 0;
+    left: 0;
+    width: 450px;
+    height: 300px;
+    display: none;
+    position: absolute;
+}
+
+
+/*#viewer {
     float: left;
     font-size: 35px;
     margin-left: 30px;
-}
+}*/
 
 
-#viewer li {
+/*#viewer li {
     display: block;
-}
+}*/
 
 #career {
     float: right;
@@ -17,8 +45,8 @@
 #pic1 {
     /*display: block;*/
     width: 100%;
-    max-width: 38px;
-    min-width: 380px;
+    max-width: 400px;
+    min-width: 400px;
 }
 
 #eddystone {
